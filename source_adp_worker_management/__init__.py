@@ -3,6 +3,6 @@
 #
 
 
-from .source import SourceJazzHR
+from .source import SourceADPWorkerManagement
 
-__all__ = ["SourceJazzHR"]
+__all__ = ["SourceADPWorkerManagement"]

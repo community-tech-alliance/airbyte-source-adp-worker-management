@@ -25,7 +25,7 @@ from source_jazzhr.streams import (
 
 
 # Source
-class SourceJazzHR(AbstractSource):
+class SourceADPWorkerManagement(AbstractSource):
     def check_connection(self, logger, config) -> Tuple[bool, any]:
         """
         Checks to see if a connection to JazzHR API can be created with given credentials.
