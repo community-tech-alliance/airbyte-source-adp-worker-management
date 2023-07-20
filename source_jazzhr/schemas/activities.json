@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "e.g., category_20211213211800_foo"
+    },
+    "category": {
+      "type": ["string", "null"],
+      "description": "e.g., resume_add"
+    },
+    "team_id": {
+      "type": ["string", "null"],
+      "description": "team id"
+    },
+    "user_id": {
+      "type": ["string", "null"],
+      "description": "user id, e.g. usr_20211206160756_bar"
+    },
+    "object_id": {
+      "type": ["string", "null"],
+      "description": "object id"
+    },
+    "action": {
+      "type": ["string", "null"],
+      "description": "Name of the action, e.g.: Courtney Cavaiola applied for the position of \"Resume Bank - Work With The Outreach Team!\""
+    },
+    "date": {
+      "type": ["string", "null"],
+      "description": "YYYY-MM-DD"
+    },
+    "time": {
+      "type": ["string", "null"],
+      "description": "hh:mm:ss"
+    }
+  }
+}

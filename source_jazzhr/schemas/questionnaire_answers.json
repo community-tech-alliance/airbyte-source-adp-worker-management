@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "job_id":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "applicant_id":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "questionnaire_id":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "questionnaire_code":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "date_taken":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "time_taken":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_value_00":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_correct_00":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_value_01":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_correct_01":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_value_02":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_correct_02":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_value_03":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_correct_03":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_value_04":  {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "answer_correct_04":  {
+      "type": ["string", "null"],
+      "description": ""
+    }
+  }
+}

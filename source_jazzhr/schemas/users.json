@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "type": {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "last_name": {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "first_name": {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "email": {
+      "type": ["string", "null"],
+      "description": ""
+    },
+    "date_created": {
+      "type": ["string", "null"],
+      "description": ""
+    }
+  }
+}

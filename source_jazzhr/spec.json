@@ -1,0 +1,19 @@
+{
+  "documentationUrl": "https://docsurl.com",
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "JazzHR Spec",
+    "type": "object",
+    "required": ["api_key"],
+    "additionalProperties": false,
+    "properties": {
+      "api_key": {
+        "title": "JazzHR API Key",
+        "description": "API Key used to interact with the JazzHR API",
+        "type": "string",
+        "airbyte_secret": "true",
+        "order": 1
+      }
+    }
+  }
+}

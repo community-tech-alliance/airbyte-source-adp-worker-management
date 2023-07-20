@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "e.g., projob_20211213211800_foo"
+    },
+    "applicant_id": {
+      "type": ["string", "null"],
+      "description": "e.g., prospect_20211213211800_foo"
+    },
+    "job_id": {
+      "type": ["string", "null"],
+      "description": "e.g., job_20211213211800_foo"
+    },
+    "rating": {
+      "type": ["integer", "null"],
+      "description": ""
+    },
+    "workflow_step_id": {
+      "type": ["integer", "null"],
+      "description": ""
+    },
+    "date": {
+      "type": ["string", "null"],
+      "description": "YYYY-MM-DD (often 0000-00-00 in this stream; don't ask _me_ why)"
+    }
+  }
+}
