@@ -29,11 +29,11 @@ RUN apk --no-cache add bash
 
 # copy payload code only
 COPY main.py ./
-COPY source_jazzhr ./source_jazzhr
+COPY source_adp_worker_management ./source_adp_worker_management
 
 ENV AIRBYTE_ENTRYPOINT "python /airbyte/integration_code/main.py"
 ENTRYPOINT ["python", "/airbyte/integration_code/main.py"]
 
 LABEL io.airbyte.version=0.1.0
-LABEL io.airbyte.name=airbyte/source-jazzhr
-LABEL org.opencontainers.image.source="https://github.com/community-tech-alliance/airbyte-source-jazzhr"
+LABEL io.airbyte.name=airbyte/source-adp-worker-management
+LABEL org.opencontainers.image.source="https://github.com/community-tech-alliance/airbyte-source-source-adp-worker-management"

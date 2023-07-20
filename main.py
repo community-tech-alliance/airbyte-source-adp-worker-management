@@ -6,7 +6,7 @@
 import sys
 
 from airbyte_cdk.entrypoint import launch
-from source_jazzhr import SourceADPWorkerManagement
+from source_adp_worker_management import SourceADPWorkerManagement
 
 if __name__ == "__main__":
     source = SourceADPWorkerManagement()

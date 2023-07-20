@@ -16,8 +16,8 @@ TEST_REQUIREMENTS = [
 ]
 
 setup(
-    name="source_jazzhr",
-    description="Source implementation for JazzHR.",
+    name="source_adp_worker_management",
+    description="Source implementation for ADP Worker Management .",
     author="Airbyte",
     author_email="contact@airbyte.io",
     packages=find_packages(),
