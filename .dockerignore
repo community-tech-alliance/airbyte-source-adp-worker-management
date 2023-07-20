@@ -1,6 +1,6 @@
 *
 !Dockerfile
 !main.py
-!source_jazzhr
+!source_adp_worker_management
 !setup.py
 !secrets
