@@ -84,9 +84,7 @@ class ADPWorkerManagementStream(HttpStream, ABC):
             (see path() in Workers class below - this method just increments self.page)
         """
 
-        # TEMPORARY: limit to 5 pages for testing
-        #if len(response.json()) > 0 and self.page < 5:
-        if len(response.json()) > 0:
+        if len(response.json()['workers'])==100:
             self.page += 1
             return True
         else:
@@ -108,7 +106,7 @@ class ADPWorkerManagementStream(HttpStream, ABC):
 
 class Workers(ADPWorkerManagementStream):
     
-    primary_key = "meta"
+    primary_key = "meta" # this means nothing, but the HttpStream class requires something ¯\_(ツ)_/¯
     url_base = "https://api.adp.com/hr/v2/"
 
     def path(
