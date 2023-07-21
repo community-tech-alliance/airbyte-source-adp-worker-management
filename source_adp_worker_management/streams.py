@@ -20,7 +20,7 @@ class ADPWorkerManagementStream(HttpStream, ABC):
         super().__init__(**kwargs)
         self.config = config
         self.url_base = "https://api.adp.com/hr/v2/"
-        self.page = 1
+        self.page = 0
 
         # Write the SSL certificate and key data to temporary files.
         ssl_cert_file = tempfile.NamedTemporaryFile(delete=False)
@@ -89,8 +89,6 @@ class ADPWorkerManagementStream(HttpStream, ABC):
             return True
         else:
             return False
-        
-        return False
 
     def parse_response(
         self,
