@@ -16,10 +16,9 @@ class ADPWorkerManagementStream(HttpStream, ABC):
     Parent class extended by all stream-specific classes
     """
 
-    def __init__(self, config, **kwargs):
+    def __init__(self, config, token_url, **kwargs):
         super().__init__(**kwargs)
         self.config = config
-        self.url_base = "https://api.adp.com/hr/v2/"
         self.page = 0
 
         # Write the SSL certificate and key data to temporary files.
@@ -37,7 +36,7 @@ class ADPWorkerManagementStream(HttpStream, ABC):
         credentials = (config['client_id'], config['client_secret'])
 
         # Obtain short-lived access token
-        token_url = 'https://accounts.adp.com/auth/oauth/v2/token'
+        # TODO(): implement a strat for refreshing this token as needed (probably a try-catch for auth errors?)
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
         body = {'grant_type': 'client_credentials'}
         response = requests.post(url=token_url, 
