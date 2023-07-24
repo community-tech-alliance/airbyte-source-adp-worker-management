@@ -14,6 +14,7 @@ from source_adp_worker_management.streams import (
     Workers
 )
 
+token_url = f"https://accounts.adp.com/auth/oauth/v2/token"
 
 # Source
 class SourceADPWorkerManagement(AbstractSource):
@@ -36,11 +37,9 @@ class SourceADPWorkerManagement(AbstractSource):
         ssl_key_file.close()
 
         ssl_cert = (ssl_cert_file.name, ssl_key_file.name)
-        token_url = f"https://accounts.adp.com/auth/oauth/v2/token"
         credentials = (config['client_id'], config['client_secret'])
 
         # Obtain short-lived access token
-        token_url = 'https://accounts.adp.com/auth/oauth/v2/token'
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
         body = {'grant_type': 'client_credentials'}
         try:
@@ -60,5 +59,7 @@ class SourceADPWorkerManagement(AbstractSource):
         :param config: A Mapping of the user input configuration as defined in the connector spec.
         """
         return [
-            Workers(config=config)
+            Workers(config=config,
+                    token_url=token_url
+                    )
         ]
