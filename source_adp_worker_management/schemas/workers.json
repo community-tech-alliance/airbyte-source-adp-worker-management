@@ -1,0 +1,1686 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+        "workers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "associateOID": {
+                "type": "string",
+                "default": "G3CW5NHRVTV3XV4V",
+                "examples": [
+                  "G3CW5NHRVTV3XV4V"
+                ]
+              },
+              "workerID": {
+                "type": "object",
+                "properties": {
+                  "idValue": {
+                    "type": "string",
+                    "default": "SCYUZDDAR",
+                    "examples": [
+                      "SCYUZDDAR"
+                    ]
+                  }
+                },
+                "required": [
+                  "idValue"
+                ],
+                "additionalProperties": false
+              },
+              "person": {
+                "type": "object",
+                "properties": {
+                  "birthDate": {
+                    "type": "string",
+                    "default": "0000-01-01",
+                    "examples": [
+                      "0000-01-01"
+                    ],
+                    "format": "date"
+                  },
+                  "genderCode": {
+                    "type": "object",
+                    "properties": {
+                      "codeValue": {
+                        "type": "string",
+                        "default": "M",
+                        "examples": [
+                          "M"
+                        ]
+                      },
+                      "shortName": {
+                        "type": "string",
+                        "default": "Male",
+                        "examples": [
+                          "Male"
+                        ]
+                      },
+                      "longName": {
+                        "type": "string",
+                        "default": "Male",
+                        "examples": [
+                          "Male"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "codeValue",
+                      "shortName",
+                      "longName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maritalStatusCode": {
+                    "type": "object",
+                    "properties": {
+                      "codeValue": {
+                        "type": "string",
+                        "default": "S",
+                        "examples": [
+                          "S"
+                        ]
+                      },
+                      "shortName": {
+                        "type": "string",
+                        "default": "Single",
+                        "examples": [
+                          "Single"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "codeValue",
+                      "shortName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "socialInsurancePrograms": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "nameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "Medicare",
+                              "examples": [
+                                "Medicare"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Medicare",
+                              "examples": [
+                                "Medicare"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "shortName"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "coveredIndicator": {
+                          "type": "boolean",
+                          "default": true,
+                          "examples": [
+                            true,
+                            false
+                          ]
+                        }
+                      },
+                      "required": [
+                        "nameCode",
+                        "coveredIndicator"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "tobaccoUserIndicator": {
+                    "type": "boolean",
+                    "default": false,
+                    "examples": [
+                      true,
+                      false
+                    ]
+                  },
+                  "disabledIndicator": {
+                    "type": "boolean",
+                    "default": false,
+                    "examples": [
+                      true,
+                      false
+                    ]
+                  },
+                  "ethnicityCode": {
+                    "type": "object",
+                    "properties": {
+                      "codeValue": {
+                        "type": "string",
+                        "default": "4",
+                        "examples": [
+                          "4"
+                        ]
+                      },
+                      "shortName": {
+                        "type": "string",
+                        "default": "4",
+                        "examples": [
+                          "4"
+                        ]
+                      },
+                      "longName": {
+                        "type": "string",
+                        "default": "Not Hispanic or Latino",
+                        "examples": [
+                          "Not Hispanic or Latino"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "codeValue",
+                      "shortName",
+                      "longName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "raceCode": {
+                    "type": "object",
+                    "properties": {
+                      "codeValue": {
+                        "type": "string",
+                        "default": "1",
+                        "examples": [
+                          "1"
+                        ]
+                      },
+                      "shortName": {
+                        "type": "string",
+                        "default": "White",
+                        "examples": [
+                          "White"
+                        ]
+                      },
+                      "longName": {
+                        "type": "string",
+                        "default": "White",
+                        "examples": [
+                          "White"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "codeValue",
+                      "shortName",
+                      "longName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "customFieldGroup": {
+                    "type": "object",
+                    "properties": {
+                      "amountFields": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "itemID": {
+                              "type": "string",
+                              "default": "169731481494_452",
+                              "examples": [
+                                "169731481494_452"
+                              ]
+                            },
+                            "nameCode": {
+                              "type": "object",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string",
+                                  "default": "Rate",
+                                  "examples": [
+                                    "Rate"
+                                  ]
+                                },
+                                "shortName": {
+                                  "type": "string",
+                                  "default": "Rate",
+                                  "examples": [
+                                    "Rate"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "codeValue",
+                                "shortName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "itemID",
+                            "nameCode"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "stringFields": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "itemID": {
+                              "type": "string",
+                              "default": "169731474432_105",
+                              "examples": [
+                                "169731474432_105"
+                              ]
+                            },
+                            "nameCode": {
+                              "type": "object",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string",
+                                  "default": "PR code",
+                                  "examples": [
+                                    "PR code"
+                                  ]
+                                },
+                                "shortName": {
+                                  "type": "string",
+                                  "default": "PR code",
+                                  "examples": [
+                                    "PR code"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "codeValue",
+                                "shortName"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "itemID",
+                            "nameCode"
+                          ],
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "required": [
+                      "amountFields",
+                      "stringFields"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "governmentIDs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "itemID": {
+                          "type": "string",
+                          "default": "62372435N",
+                          "examples": [
+                            "62372435N"
+                          ]
+                        },
+                        "idValue": {
+                          "type": "string",
+                          "default": "XXX-XX-6458",
+                          "examples": [
+                            "XXX-XX-6458"
+                          ]
+                        },
+                        "nameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "SSN",
+                              "examples": [
+                                "SSN"
+                              ]
+                            },
+                            "longName": {
+                              "type": "string",
+                              "default": "Social Security Number",
+                              "examples": [
+                                "Social Security Number"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "longName"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "countryCode": {
+                          "type": "string",
+                          "default": "US",
+                          "examples": [
+                            "US"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "itemID",
+                        "idValue",
+                        "nameCode",
+                        "countryCode"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "legalName": {
+                    "type": "object",
+                    "properties": {
+                      "givenName": {
+                        "type": "string",
+                        "default": "Test626913197",
+                        "examples": [
+                          "Test626913197"
+                        ]
+                      },
+                      "middleName": {
+                        "type": "string",
+                        "default": "two",
+                        "examples": [
+                          "two"
+                        ]
+                      },
+                      "familyName1": {
+                        "type": "string",
+                        "default": "NewHire",
+                        "examples": [
+                          "NewHire"
+                        ]
+                      },
+                      "formattedName": {
+                        "type": "string",
+                        "default": "NewHire, Test626913197 two",
+                        "examples": [
+                          "NewHire, Test626913197 two"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "givenName",
+                      "middleName",
+                      "familyName1",
+                      "formattedName"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "legalAddress": {
+                    "type": "object",
+                    "properties": {
+                      "nameCode": {
+                        "type": "object",
+                        "properties": {
+                          "codeValue": {
+                            "type": "string",
+                            "default": "Personal Address 1",
+                            "examples": [
+                              "Personal Address 1"
+                            ]
+                          },
+                          "shortName": {
+                            "type": "string",
+                            "default": "Personal Address 1",
+                            "examples": [
+                              "Personal Address 1"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "codeValue",
+                          "shortName"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "lineOne": {
+                        "type": "string",
+                        "default": "line 1",
+                        "examples": [
+                          "line 1"
+                        ]
+                      },
+                      "lineTwo": {
+                        "type": "string",
+                        "default": "line 2",
+                        "examples": [
+                          "line 2"
+                        ]
+                      },
+                      "lineThree": {
+                        "type": "string",
+                        "default": "Address line 3",
+                        "examples": [
+                          "Address line 3"
+                        ]
+                      },
+                      "cityName": {
+                        "type": "string",
+                        "default": "New Jersey",
+                        "examples": [
+                          "New Jersey"
+                        ]
+                      },
+                      "countrySubdivisionLevel1": {
+                        "type": "object",
+                        "properties": {
+                          "subdivisionType": {
+                            "type": "string",
+                            "default": "StateTerritory",
+                            "examples": [
+                              "StateTerritory"
+                            ]
+                          },
+                          "codeValue": {
+                            "type": "string",
+                            "default": "NJ",
+                            "examples": [
+                              "NJ"
+                            ]
+                          },
+                          "shortName": {
+                            "type": "string",
+                            "default": "New Jersey",
+                            "examples": [
+                              "New Jersey"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "subdivisionType",
+                          "codeValue",
+                          "shortName"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "countryCode": {
+                        "type": "string",
+                        "default": "US",
+                        "examples": [
+                          "US"
+                        ]
+                      },
+                      "postalCode": {
+                        "type": "string",
+                        "default": "30041",
+                        "examples": [
+                          "30041"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "nameCode",
+                      "lineOne",
+                      "lineTwo",
+                      "lineThree",
+                      "cityName",
+                      "countrySubdivisionLevel1",
+                      "countryCode",
+                      "postalCode"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "communication": {
+                    "type": "object",
+                    "properties": {
+                      "landlines": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "itemID": {
+                              "type": "string",
+                              "default": "CC1_169730801994_1514",
+                              "examples": [
+                                "CC1_169730801994_1514"
+                              ]
+                            },
+                            "nameCode": {
+                              "type": "object",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string",
+                                  "default": "Home Phone",
+                                  "examples": [
+                                    "Home Phone"
+                                  ]
+                                },
+                                "shortName": {
+                                  "type": "string",
+                                  "default": "Home Phone",
+                                  "examples": [
+                                    "Home Phone"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "codeValue",
+                                "shortName"
+                              ]
+                            },
+                            "countryDialing": {
+                              "type": "string",
+                              "default": "1",
+                              "examples": [
+                                "1"
+                              ]
+                            },
+                            "areaDialing": {
+                              "type": "string",
+                              "default": "973",
+                              "examples": [
+                                "973"
+                              ]
+                            },
+                            "dialNumber": {
+                              "type": "string",
+                              "default": "2345432",
+                              "examples": [
+                                "2345432"
+                              ]
+                            },
+                            "access": {
+                              "type": "string",
+                              "default": "1",
+                              "examples": [
+                                "1"
+                              ]
+                            },
+                            "formattedNumber": {
+                              "type": "string",
+                              "default": "(973) 234-5432",
+                              "examples": [
+                                "(973) 234-5432"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "itemID",
+                            "nameCode",
+                            "countryDialing",
+                            "areaDialing",
+                            "dialNumber",
+                            "access",
+                            "formattedNumber"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "mobiles": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "itemID": {
+                              "type": "string",
+                              "default": "CC1_169730801994_1513",
+                              "examples": [
+                                "CC1_169730801994_1513"
+                              ]
+                            },
+                            "nameCode": {
+                              "type": "object",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string",
+                                  "default": "Personal Cell",
+                                  "examples": [
+                                    "Personal Cell"
+                                  ]
+                                },
+                                "shortName": {
+                                  "type": "string",
+                                  "default": "Personal Cell",
+                                  "examples": [
+                                    "Personal Cell"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "codeValue",
+                                "shortName"
+                              ]
+                            },
+                            "countryDialing": {
+                              "type": "string",
+                              "default": "1",
+                              "examples": [
+                                "1"
+                              ]
+                            },
+                            "areaDialing": {
+                              "type": "string",
+                              "default": "770",
+                              "examples": [
+                                "770"
+                              ]
+                            },
+                            "dialNumber": {
+                              "type": "string",
+                              "default": "2398790",
+                              "examples": [
+                                "2398790"
+                              ]
+                            },
+                            "access": {
+                              "type": "string",
+                              "default": "1",
+                              "examples": [
+                                "1"
+                              ]
+                            },
+                            "formattedNumber": {
+                              "type": "string",
+                              "default": "(770) 239-8790",
+                              "examples": [
+                                "(770) 239-8790"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "itemID",
+                            "nameCode",
+                            "countryDialing",
+                            "areaDialing",
+                            "dialNumber",
+                            "access",
+                            "formattedNumber"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "faxes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "itemID": {
+                              "type": "string",
+                              "default": "CC1_169730801994_1515",
+                              "examples": [
+                                "CC1_169730801994_1515"
+                              ]
+                            },
+                            "nameCode": {
+                              "type": "object",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string",
+                                  "default": "Home Fax",
+                                  "examples": [
+                                    "Home Fax"
+                                  ]
+                                },
+                                "shortName": {
+                                  "type": "string",
+                                  "default": "Home Fax",
+                                  "examples": [
+                                    "Home Fax"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "codeValue",
+                                "shortName"
+                              ]
+                            },
+                            "countryDialing": {
+                              "type": "string",
+                              "default": "91",
+                              "examples": [
+                                "91"
+                              ]
+                            },
+                            "areaDialing": {
+                              "type": "string",
+                              "default": "770",
+                              "examples": [
+                                "770"
+                              ]
+                            },
+                            "dialNumber": {
+                              "type": "string",
+                              "default": "2345432890890790",
+                              "examples": [
+                                "2345432890890790"
+                              ]
+                            },
+                            "access": {
+                              "type": "string",
+                              "default": "429",
+                              "examples": [
+                                "429"
+                              ]
+                            },
+                            "formattedNumber": {
+                              "type": "string",
+                              "default": "+91 (429) 770 2345432890890790",
+                              "examples": [
+                                "+91 (429) 770 2345432890890790"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "itemID",
+                            "nameCode",
+                            "countryDialing",
+                            "areaDialing",
+                            "dialNumber",
+                            "access",
+                            "formattedNumber"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "emails": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "nameCode": {
+                              "type": "object",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string",
+                                  "default": "Personal E-mail",
+                                  "examples": [
+                                    "Personal E-mail"
+                                  ]
+                                },
+                                "shortName": {
+                                  "type": "string",
+                                  "default": "Personal E-mail",
+                                  "examples": [
+                                    "Personal E-mail"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "codeValue",
+                                "shortName"
+                              ]
+                            },
+                            "emailUri": {
+                              "type": "string",
+                              "default": "personal626913197@newHirePersonal.com",
+                              "examples": [
+                                "personal626913197@newHirePersonal.com"
+                              ],
+                              "format": "email"
+                            }
+                          },
+                          "required": [
+                            "nameCode",
+                            "emailUri"
+                          ],
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "required": [
+                      "landlines",
+                      "mobiles",
+                      "faxes",
+                      "emails"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "birthDate",
+                  "genderCode",
+                  "maritalStatusCode",
+                  "socialInsurancePrograms",
+                  "tobaccoUserIndicator",
+                  "disabledIndicator",
+                  "ethnicityCode",
+                  "raceCode",
+                  "customFieldGroup",
+                  "governmentIDs",
+                  "legalName",
+                  "legalAddress",
+                  "communication"
+                ],
+                "additionalProperties": false
+              },
+              "workerDates": {
+                "type": "object",
+                "properties": {
+                  "originalHireDate": {
+                    "type": "string",
+                    "default": "2019-03-22",
+                    "examples": [
+                      "2019-03-22"
+                    ],
+                    "format": "date"
+                  }
+                },
+                "required": [
+                  "originalHireDate"
+                ],
+                "additionalProperties": false
+              },
+              "workerStatus": {
+                "type": "object",
+                "properties": {
+                  "statusCode": {
+                    "type": "object",
+                    "properties": {
+                      "codeValue": {
+                        "type": "string",
+                        "default": "Active",
+                        "examples": [
+                          "Active"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "codeValue"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "statusCode"
+                ],
+                "additionalProperties": false
+              },
+              "businessCommunication": {
+                "type": "object",
+                "properties": {
+                  "landlines": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "itemID": {
+                          "type": "string",
+                          "default": "CC1_169730801994_1518",
+                          "examples": [
+                            "CC1_169730801994_1518"
+                          ]
+                        },
+                        "nameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "Work Phone",
+                              "examples": [
+                                "Work Phone"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Work Phone",
+                              "examples": [
+                                "Work Phone"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "shortName"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "countryDialing": {
+                          "type": "string",
+                          "default": "91",
+                          "examples": [
+                            "91"
+                          ]
+                        },
+                        "areaDialing": {
+                          "type": "string",
+                          "default": "770",
+                          "examples": [
+                            "770"
+                          ]
+                        },
+                        "dialNumber": {
+                          "type": "string",
+                          "default": "2345432890890793",
+                          "examples": [
+                            "2345432890890793"
+                          ]
+                        },
+                        "access": {
+                          "type": "string",
+                          "default": "429",
+                          "examples": [
+                            "429"
+                          ]
+                        },
+                        "formattedNumber": {
+                          "type": "string",
+                          "default": "+91 (429) 770 2345432890890793",
+                          "examples": [
+                            "+91 (429) 770 2345432890890793"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "itemID",
+                        "nameCode",
+                        "countryDialing",
+                        "areaDialing",
+                        "dialNumber",
+                        "access",
+                        "formattedNumber"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "mobiles": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "itemID": {
+                          "type": "string",
+                          "default": "CC1_169730801994_1517",
+                          "examples": [
+                            "CC1_169730801994_1517"
+                          ]
+                        },
+                        "nameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "Work Cell",
+                              "examples": [
+                                "Work Cell"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Work Cell",
+                              "examples": [
+                                "Work Cell"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "shortName"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "countryDialing": {
+                          "type": "string",
+                          "default": "91",
+                          "examples": [
+                            "91"
+                          ]
+                        },
+                        "areaDialing": {
+                          "type": "string",
+                          "default": "770",
+                          "examples": [
+                            "770"
+                          ]
+                        },
+                        "dialNumber": {
+                          "type": "string",
+                          "default": "2345432890890794",
+                          "examples": [
+                            "2345432890890794"
+                          ]
+                        },
+                        "access": {
+                          "type": "string",
+                          "default": "429",
+                          "examples": [
+                            "429"
+                          ]
+                        },
+                        "formattedNumber": {
+                          "type": "string",
+                          "default": "+91 (429) 770 2345432890890794",
+                          "examples": [
+                            "+91 (429) 770 2345432890890794"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "itemID",
+                        "nameCode",
+                        "countryDialing",
+                        "areaDialing",
+                        "dialNumber",
+                        "access",
+                        "formattedNumber"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "faxes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "itemID": {
+                          "type": "string",
+                          "default": "CC1_169730801994_1519",
+                          "examples": [
+                            "CC1_169730801994_1519"
+                          ]
+                        },
+                        "nameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "Work Fax",
+                              "examples": [
+                                "Work Fax"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Work Fax",
+                              "examples": [
+                                "Work Fax"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "shortName"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "countryDialing": {
+                          "type": "string",
+                          "default": "91",
+                          "examples": [
+                            "91"
+                          ]
+                        },
+                        "areaDialing": {
+                          "type": "string",
+                          "default": "770",
+                          "examples": [
+                            "770"
+                          ]
+                        },
+                        "dialNumber": {
+                          "type": "string",
+                          "default": "2345432890890795",
+                          "examples": [
+                            "2345432890890795"
+                          ]
+                        },
+                        "access": {
+                          "type": "string",
+                          "default": "429",
+                          "examples": [
+                            "429"
+                          ]
+                        },
+                        "formattedNumber": {
+                          "type": "string",
+                          "default": "+91 (429) 770 2345432890890795",
+                          "examples": [
+                            "+91 (429) 770 2345432890890795"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "itemID",
+                        "nameCode",
+                        "countryDialing",
+                        "areaDialing",
+                        "dialNumber",
+                        "access",
+                        "formattedNumber"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "pagers": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "itemID": {
+                          "type": "string",
+                          "default": "CC1_169730801994_1520",
+                          "examples": [
+                            "CC1_169730801994_1520"
+                          ]
+                        },
+                        "nameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "Work Pager",
+                              "examples": [
+                                "Work Pager"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Work Pager",
+                              "examples": [
+                                "Work Pager"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "shortName"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "countryDialing": {
+                          "type": "string",
+                          "default": "91",
+                          "examples": [
+                            "91"
+                          ]
+                        },
+                        "areaDialing": {
+                          "type": "string",
+                          "default": "770",
+                          "examples": [
+                            "770"
+                          ]
+                        },
+                        "dialNumber": {
+                          "type": "string",
+                          "default": "2345432890890796",
+                          "examples": [
+                            "2345432890890796"
+                          ]
+                        },
+                        "access": {
+                          "type": "string",
+                          "default": "429",
+                          "examples": [
+                            "429"
+                          ]
+                        },
+                        "formattedNumber": {
+                          "type": "string",
+                          "default": "+91 (429) 770 2345432890890796",
+                          "examples": [
+                            "+91 (429) 770 2345432890890796"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "itemID",
+                        "nameCode",
+                        "countryDialing",
+                        "areaDialing",
+                        "dialNumber",
+                        "access",
+                        "formattedNumber"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "emails": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "itemID": {
+                          "type": "string",
+                          "default": "Business",
+                          "examples": [
+                            "Business"
+                          ]
+                        },
+                        "nameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "Work E-mail",
+                              "examples": [
+                                "Work E-mail"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Work E-mail",
+                              "examples": [
+                                "Work E-mail"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "shortName"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "emailUri": {
+                          "type": "string",
+                          "default": "business626913197@newHireBusiness.com",
+                          "examples": [
+                            "business626913197@newHireBusiness.com"
+                          ],
+                          "format": "email"
+                        }
+                      },
+                      "required": [
+                        "itemID",
+                        "nameCode",
+                        "emailUri"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "landlines",
+                  "mobiles",
+                  "faxes",
+                  "pagers",
+                  "emails"
+                ],
+                "additionalProperties": false
+              },
+              "workAssignments": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "itemID": {
+                      "type": "string",
+                      "default": "62372435N",
+                      "examples": [
+                        "62372435N"
+                      ]
+                    },
+                    "primaryIndicator": {
+                      "type": "boolean",
+                      "default": true,
+                      "examples": [
+                        true,
+                        false
+                      ]
+                    },
+                    "hireDate": {
+                      "type": "string",
+                      "default": "2019-03-22",
+                      "examples": [
+                        "2019-03-22"
+                      ],
+                      "format": "date"
+                    },
+                    "actualStartDate": {
+                      "type": "string",
+                      "default": "2019-03-22",
+                      "examples": [
+                        "2019-03-22"
+                      ],
+                      "format": "date"
+                    },
+                    "assignmentStatus": {
+                      "type": "object",
+                      "properties": {
+                        "statusCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "A",
+                              "examples": [
+                                "A"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Active",
+                              "examples": [
+                                "Active"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "codeValue",
+                            "shortName"
+                          ],
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "workerTypeCode": {
+                      "type": "object",
+                      "properties": {
+                        "codeValue": {
+                          "type": "string",
+                          "default": "F",
+                          "examples": [
+                            "F"
+                          ]
+                        },
+                        "shortName": {
+                          "type": "string",
+                          "default": "Full Time",
+                          "examples": [
+                            "Full Time"
+                          ]
+                        }
+                      }
+                    },
+                    "jobCode": {
+                      "type": "object",
+                      "properties": {
+                        "codeValue": {
+                          "type": "string",
+                          "default": "PT",
+                          "examples": [
+                            "PT"
+                          ]
+                        },
+                        "shortName": {
+                          "type": "string",
+                          "default": "**",
+                          "examples": [
+                            "**"
+                          ]
+                        }
+                      }
+                    },
+                    "jobTitle": {
+                      "type": "string",
+                      "default": "PT - **",
+                      "examples": [
+                        "PT - **"
+                      ]
+                    },
+                    "wageLawCoverage": {
+                      "type": "object",
+                      "properties": {
+                        "wageLawNameCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "FLSA",
+                              "examples": [
+                                "FLSA"
+                              ]
+                            },
+                            "longName": {
+                              "type": "string",
+                              "default": "Fair Labor Standards Act",
+                              "examples": [
+                                "Fair Labor Standards Act"
+                              ]
+                            }
+                          }
+                        },
+                        "coverageCode": {
+                          "type": "object",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string",
+                              "default": "E",
+                              "examples": [
+                                "E"
+                              ]
+                            },
+                            "shortName": {
+                              "type": "string",
+                              "default": "Exempt",
+                              "examples": [
+                                "Exempt"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "positionID": {
+                      "type": "string",
+                      "default": "94N626913",
+                      "examples": [
+                        "94N626913"
+                      ]
+                    },
+                    "homeOrganizationalUnits": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "nameCode": {
+                            "type": "object",
+                            "properties": {
+                              "codeValue": {
+                                "type": "string",
+                                "default": "B",
+                                "examples": [
+                                  "B"
+                                ]
+                              },
+                              "shortName": {
+                                "type": "string",
+                                "default": "test",
+                                "examples": [
+                                  "test"
+                                ]
+                              }
+                            }
+                          },
+                          "typeCode": {
+                            "type": "object",
+                            "properties": {
+                              "codeValue": {
+                                "type": "string",
+                                "default": "Business Unit",
+                                "examples": [
+                                  "Business Unit"
+                                ]
+                              },
+                              "shortName": {
+                                "type": "string",
+                                "default": "Business Unit",
+                                "examples": [
+                                  "Business Unit"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "assignedOrganizationalUnits": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "nameCode": {
+                            "type": "object",
+                            "properties": {
+                              "codeValue": {
+                                "type": "string",
+                                "default": "B",
+                                "examples": [
+                                  "B"
+                                ]
+                              },
+                              "shortName": {
+                                "type": "string",
+                                "default": "test",
+                                "examples": [
+                                  "test"
+                                ]
+                              }
+                            }
+                          },
+                          "typeCode": {
+                            "type": "object",
+                            "properties": {
+                              "codeValue": {
+                                "type": "string",
+                                "default": "Business Unit",
+                                "examples": [
+                                  "Business Unit"
+                                ]
+                              },
+                              "shortName": {
+                                "type": "string",
+                                "default": "Business Unit",
+                                "examples": [
+                                  "Business Unit"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "payCycleCode": {
+                      "type": "object",
+                      "properties": {
+                        "codeValue": {
+                          "type": "string",
+                          "default": "W",
+                          "examples": [
+                            "W"
+                          ]
+                        },
+                        "shortName": {
+                          "type": "string",
+                          "default": "Weekly",
+                          "examples": [
+                            "Weekly"
+                          ]
+                        }
+                      }
+                    },
+                    "standardPayPeriodHours": {
+                      "type": "object",
+                      "properties": {
+                        "hoursQuantity": {
+                          "type": "integer",
+                          "default": 40,
+                          "examples": [
+                            40
+                          ]
+                        }
+                      }
+                    },
+                    "baseRemuneration": {
+                      "type": "object",
+                      "properties": {
+                        "payPeriodRateAmount": {
+                          "type": "object",
+                          "properties": {
+                            "nameCode": {
+                              "type": "object",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string",
+                                  "default": "Salary",
+                                  "examples": [
+                                    "Salary"
+                                  ]
+                                },
+                                "shortName": {
+                                  "type": "string",
+                                  "default": "Salary",
+                                  "examples": [
+                                    "Salary"
+                                  ]
+                                }
+                              }
+                            },
+                            "amountValue": {
+                              "type": "integer",
+                              "default": 12332,
+                              "examples": [
+                                12332
+                              ]
+                            },
+                            "currencyCode": {
+                              "type": "string",
+                              "default": "USD",
+                              "examples": [
+                                "USD"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "nameCode",
+                            "amountValue",
+                            "currencyCode"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "effectiveDate": {
+                          "type": "string",
+                          "default": "2019-03-22",
+                          "examples": [
+                            "2019-03-22"
+                          ],
+                          "format": "date"
+                        }
+                      }
+                    },
+                    "payrollGroupCode": {
+                      "type": "string",
+                      "default": "94N",
+                      "examples": [
+                        "94N"
+                      ]
+                    },
+                    "payrollScheduleGroupID": {
+                      "type": "string",
+                      "default": "Use Period End Date 1 on checks",
+                      "examples": [
+                        "Use Period End Date 1 on checks"
+                      ]
+                    },
+                    "payrollFileNumber": {
+                      "type": "string",
+                      "default": "626913",
+                      "examples": [
+                        "626913"
+                      ]
+                    },
+                    "managementPositionIndicator": {
+                      "type": "boolean",
+                      "default": false,
+                      "examples": [
+                        true,
+                        false
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+    "meta": {
+      "type": ["string", "null"],
+      "description": "should be null, probably"
+    },
+    "confirmMessage": {
+      "type": ["string", "null"],
+      "description": "should be null, probably"
+    }
+}
