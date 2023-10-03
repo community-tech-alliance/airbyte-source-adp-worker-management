@@ -10,6 +10,9 @@ import requests
 import tempfile
 from airbyte_cdk.sources.streams.http import HttpStream
 
+logging.basicConfig(level=logging.DEBUG)
+token_url = f"https://accounts.adp.com/auth/oauth/v2/token"
+
 # Basic full refresh stream
 class ADPWorkerManagementStream(HttpStream, ABC):
     """
@@ -47,6 +50,18 @@ class ADPWorkerManagementStream(HttpStream, ABC):
                                  )
         self.access_token = response.json()['access_token']
 
+        # Get total records (use in pagination logic to avert disaster if total records are a multiple of 100)
+        headers = {"Authorization": "Bearer " + self.access_token}
+        records_count_url = "https://api.adp.com/hr/v2/workers?count=true"
+        records_count_response = requests.get(records_count_url, headers=headers, cert=self.ssl_cert)      
+        total_records = records_count_response.json()['meta']['totalNumber']
+
+        # Each page has 100 records, so this logic determines the total number of pages to read
+        if total_records%100 == 0:
+            self.final_page = total_records/100 - 1
+        else:
+            self.final_page = round(total_records/100)
+
     def request_headers(
         self,
         stream_state: Mapping[str, Any],
@@ -81,9 +96,10 @@ class ADPWorkerManagementStream(HttpStream, ABC):
             - skip the first 100*{page} records
             - grab the next 100 by returning endpoint = f"workers?$skip={self.page}00&$top=100"
             (see path() in Workers class below - this method just increments self.page)
-        """
 
-        if len(response.json()['workers'])==100:
+        """
+   
+        if self.page < self.final_page:
             self.page += 1
             return True
         else:
