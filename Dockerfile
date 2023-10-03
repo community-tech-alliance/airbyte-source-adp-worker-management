@@ -34,6 +34,6 @@ COPY source_adp_worker_management ./source_adp_worker_management
 ENV AIRBYTE_ENTRYPOINT "python /airbyte/integration_code/main.py"
 ENTRYPOINT ["python", "/airbyte/integration_code/main.py"]
 
-LABEL io.airbyte.version=0.1.0
-LABEL io.airbyte.name=airbyte/source-adp-worker-management
+LABEL io.airbyte.version=0.0.4
+LABEL io.airbyte.name=communitytechalliance/airbyte-source-adp-worker-management
 LABEL org.opencontainers.image.source="https://github.com/community-tech-alliance/airbyte-source-source-adp-worker-management"
