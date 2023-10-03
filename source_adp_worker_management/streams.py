@@ -3,6 +3,7 @@
 #
 
 from abc import ABC
+from math import floor
 from typing import Any, Iterable, List, Mapping, MutableMapping, Optional, Tuple
 
 import logging
@@ -58,9 +59,9 @@ class ADPWorkerManagementStream(HttpStream, ABC):
 
         # Each page has 100 records, so this logic determines the total number of pages to read
         if total_records%100 == 0:
-            self.final_page = total_records/100 - 1
+            self.final_page = int((total_records/100) - 1)
         else:
-            self.final_page = round(total_records/100)
+            self.final_page = floor(total_records/100)
 
     def request_headers(
         self,
