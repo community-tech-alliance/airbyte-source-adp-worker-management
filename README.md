@@ -60,7 +60,7 @@ python main.py read --config secrets/config.json --catalog integration_tests/con
 #### Build
 First, make sure you build the latest Docker image:
 ```
-docker build . -t ghcr.io/community-tech-alliance/source-adp-worker-management:0.0
+docker build . -t communitytechalliance/airbyte-source-adp-worker-management:0.0.1
 ```
 
 You can also build the connector image via Gradle:
@@ -73,10 +73,10 @@ the Dockerfile.
 #### Run
 Then run any of the connector commands as follows:
 ```
-docker run --rm ghcr.io/community-tech-alliance/source-adp-worker-management:0.0 spec
-docker run --rm -v $(pwd)/secrets:/secrets ghcr.io/community-tech-alliance/source-adp-worker-management:0.0 check --config /secrets/config.json
-docker run --rm -v $(pwd)/secrets:/secrets ghcr.io/community-tech-alliance/source-adp-worker-management:0.0 discover --config /secrets/config.json
-docker run --rm -v $(pwd)/secrets:/secrets -v $(pwd)/integration_tests:/integration_tests ghcr.io/community-tech-alliance/source-adp-worker-management:0.0 read --config /secrets/config.json --catalog /integration_tests/configured_catalog.json
+docker run --rm communitytechalliance/airbyte-source-adp-worker-management:0.0.1 spec
+docker run --rm -v $(pwd)/secrets:/secrets communitytechalliance/airbyte-source-adp-worker-management:0.0.1 check --config /secrets/config.json
+docker run --rm -v $(pwd)/secrets:/secrets communitytechalliance/airbyte-source-adp-worker-management:0.0.1 discover --config /secrets/config.json
+docker run --rm -v $(pwd)/secrets:/secrets -v $(pwd)/integration_tests:/integration_tests communitytechalliance/airbyte-source-adp-worker-management:0.0.1 read --config /secrets/config.json --catalog /integration_tests/configured_catalog.json
 ```
 ## Testing
 Make sure to familiarize yourself with [pytest test discovery](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery) to know how your test files and methods should be named.
